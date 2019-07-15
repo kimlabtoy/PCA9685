@@ -1,7 +1,3 @@
-/**
-* MakeCode extension for micro:bit expansion board "Nexus:bit" and robot "NexusBot" from Taiwan Coding Education Association (TCEA)
-* By Alan Wang, 2019
-*/
 
 enum boardType {
     //% block="Nexus:bit"
@@ -216,9 +212,9 @@ enum botWalk {
 let _boardType: boardType = boardType.nexusbit
 
 //% weight=200 color=#009fb7 icon="\uf1aa" block="Nexus:bit"
-namespace PCA9685 {
+namespace PCA9685 Servo {
 
-    let _joystickSen = joystickSen.normal
+
     let _servoNum = 16
     let _rLedPin = 15
     let _gLedPin = 14
