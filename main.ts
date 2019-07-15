@@ -212,7 +212,7 @@ enum botWalk {
 let _boardType: boardType = boardType.nexusbit
 
 //% weight=200 color=#009fb7 icon="\uf1aa" block="Nexus:bit"
-namespace PCA9685 Servo {
+namespace PCA9685{
 
 
     let _servoNum = 16
