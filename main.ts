@@ -211,8 +211,8 @@ enum botWalk {
 
 let _boardType: boardType = boardType.nexusbit
 
-//% weight=200 color=#009fb7 icon="\uf1aa" block="Nexus:bit"
-namespace PCA9685{
+//% weight=0 color=#009fb7 icon="\uf11a" block="PCA9685Servo"
+namespace PCA9685Servo{
 
 
     let _servoNum = 16
@@ -234,26 +234,7 @@ namespace PCA9685{
         }
     }
 
-    //% block="Select board type %type" group="1. Setup"
-    export function selectBoard(type: boardType) {
-        _boardType = type
-        if (_boardType == boardType.nexusbit) {
-            _boardName = "Nexus:bit"
-            _servoNum = 12
-            _rLedPin = 15
-            _gLedPin = 14
-            _bLedPin = 13
-        } else {
-            _boardName = "Thunder:bit "
-            _boardName += (_boardType == boardType.thunderbit_v2) ? "V2" : "V1"
-            _servoNum = (_boardType == boardType.thunderbit_v2) ? 8 : 4
-            _rLedPin = 9
-            _gLedPin = 10
-            _bLedPin = 11
-        }
-    }
 
- 
 
     //% block="PCA9685 servo no. %servo turn to %degree degree(s)" servo.min=1 servo.max=16 servo.defl=1 degree.shadow="protractorPicker" degree.defl=180 group="4. PCA9685 Servos"
     export function servoTo(servo: number, degree: number) {
@@ -279,14 +260,7 @@ namespace PCA9685{
                 if (degrees[i] != null)
                     servoTo(i + 1, degrees[i])
     }
-
-
-    //% block="(null)" group="4. PCA9685 Servos" advanced=true
-    export function return_null(): number {
-        return null
-    }
-
-    
+  
 
 }
 
