@@ -1,0 +1,19 @@
+{
+    "name": "PCA9685",
+    "version": "0.0.1",
+    "description": "KimLAB 9685 Block",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh-tw/pxt-Nexusbit-strings.json",
+        "_locales/zh-cn/pxt-Nexusbit-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
